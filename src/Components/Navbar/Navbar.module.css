@@ -1,0 +1,17 @@
+.navbar {
+  background-color: #a7727d;
+  height: 12vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+
+.title-app {
+  font-size: 2rem;
+  color: #fff;
+}
+
+
