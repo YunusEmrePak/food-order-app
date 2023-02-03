@@ -1,0 +1,24 @@
+.meals-container {
+    background-color: #fff;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 100rem;
+    border-radius: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    animation: meals-appear 1s ease-out forwards;
+}
+
+@keyframes meals-appear {
+    from {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

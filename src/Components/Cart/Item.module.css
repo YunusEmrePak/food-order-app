@@ -1,0 +1,33 @@
+.cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding: .5rem;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.ttl {
+  width: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.totalMeal {
+    border: 1px solid black;
+    padding: .4rem;
+    border-radius: 5px;
+}

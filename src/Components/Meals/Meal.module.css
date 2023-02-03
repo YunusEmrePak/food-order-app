@@ -1,0 +1,41 @@
+.meal {
+  height: 7rem;
+  width: 80rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid black;
+}
+
+.information {
+  margin-left: 2rem;
+  font-size: 1.3rem;
+}
+
+.title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.inf {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  margin-bottom: 0.5rem;
+  color: rgba(199, 39, 39, 0.932);
+}
+
+.amount {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.amountButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

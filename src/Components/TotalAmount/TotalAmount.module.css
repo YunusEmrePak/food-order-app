@@ -1,0 +1,21 @@
+.totalAmount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .7rem;
+}
+
+.totalAmount label {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.totalPrice {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}

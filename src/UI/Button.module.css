@@ -1,0 +1,13 @@
+.button {
+  all: unset;
+  background-color: red;  
+  color: #fff;
+  width: 7rem;
+  height: 2.5rem;
+  border-radius: 3rem;
+  margin-top: 1rem;
+  margin-left: .3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
