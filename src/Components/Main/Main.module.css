@@ -1,8 +1,8 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #8a2b06;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #8a2b06;
 }
 
 .mainImg {
@@ -20,26 +20,35 @@
 }
 
 .explanation {
-    background-color: #263159;
-    color: #fff;
-    height: 15rem;
-    width: 50rem;
-    margin-top: -10rem;
-    padding: 2rem;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3rem;
+  background-color: #263159;
+  color: #fff;
+  height: 15rem;
+  width: 50rem;
+  margin-top: -10rem;
+  padding: 2rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
 }
 
 .expTitle {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .expParag {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
 }

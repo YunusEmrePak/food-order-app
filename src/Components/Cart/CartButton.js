@@ -8,7 +8,7 @@ const CartButton = (props) => {
 
   return (
     <React.Fragment>
-      <button className={classes.button} onClick={AuthCtx.openCartHandler}>
+      <button className={`${classes.button}`} onClick={AuthCtx.openCartHandler}>
         🛒 Your Cart
         <div className={classes.cartCounter}>{AuthCtx.itemCounter}</div>
       </button>

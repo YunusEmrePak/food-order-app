@@ -1,13 +1,16 @@
 import React from "react";
 import Meals from "../Meals/Meals";
+
 import classes from "./Main.module.css";
 import background from "../../Images/meals.jpg";
 
 const Main = (props) => {
-
+  
   return (
     <React.Fragment>
-      <div className={classes.container}>
+      <div
+        className={classes.container}
+      >
         <div className={classes.mainImg}>
           <img src={background} alt="img" />
         </div>
@@ -22,7 +25,6 @@ const Main = (props) => {
         </div>
         <Meals />
       </div>
-      
     </React.Fragment>
   );
 };

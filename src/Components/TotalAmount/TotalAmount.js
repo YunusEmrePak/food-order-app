@@ -11,7 +11,7 @@ const TotalAmount = () => {
         <React.Fragment>
             <div className={classes.totalAmount}>
                 <label>Total Amount</label>
-                <div className={classes.totalPrice}>$55.78</div>
+                <div className={classes.totalPrice}>${AuthCtx.totalAmount}</div>
             </div>
             <div className={classes.buttons}>
                 <Button className="button" type="button" buttonName="Close" onClick={AuthCtx.closeCartHandler} />

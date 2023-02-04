@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import AmountInput from "../Input/AmountInput";
 import Button from "../../UI/Button";
 import AuthContext from "../../store/auth-context";
@@ -7,6 +7,16 @@ import classes from "./Meal.module.css";
 
 const Meal = (props) => {
   const AuthCtx = useContext(AuthContext);
+
+  const addItemHandler = () => {
+    const data = {
+      id: Math.random(),
+      mealName: props.title,
+      total: AuthCtx.total
+    };
+
+    AuthCtx.transferData(data, props.price);
+  };
 
   return (
     <React.Fragment>
@@ -22,7 +32,10 @@ const Meal = (props) => {
             <AmountInput />
           </div>
           <Button
-            onClick={AuthCtx.increaseHandler}
+            onClick={() => {
+              AuthCtx.increaseHandler();
+              addItemHandler();
+            }}
             buttonName="+ Add"
             type="button"
             className="button"

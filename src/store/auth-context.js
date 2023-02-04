@@ -6,13 +6,20 @@ const AuthContext = React.createContext({
   changeAmount: () => {},
   openCartHandler: () => {},
   closeCartHandler: () => {},
-  isLoggedCart: false
+  transferData: () => {},
+  isLoggedCart: false,
+  transferredData: {},
+  total: 0,
+  totalAmount: 0
 });
 
 export const AuthContextProvider = (props) => {
   const [itemCounter, setItemCounter] = useState(0);
   const [inputValue, setInputValue] = useState(1);
   const [isLoggedCart, setIsLoggedCart] = useState(false);
+  const [transferredData, setTransferredData] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [totalAmount, setTotalAmount] = useState(0);
 
   const increaseCounterHandler = () => {
     setItemCounter((prev) => {
@@ -32,6 +39,23 @@ export const AuthContextProvider = (props) => {
     setIsLoggedCart(false);
   }
 
+  const transferData = (data, price) => {
+    setTransferredData(prev => {
+      if (data.mealName !== prev.mealName) {
+        return [...prev, data];
+      }
+    });
+
+    setTotal(prev => {
+      return prev + inputValue;
+    });
+
+    setTotalAmount(prev => {
+      return +parseFloat(prev + (+price) * inputValue).toFixed(2);
+    });
+
+  }
+
   return (
     <AuthContext.Provider
       value={{
@@ -40,7 +64,11 @@ export const AuthContextProvider = (props) => {
         changeAmountHandler: changeAmountHandler,
         openCartHandler: openCartHandler,
         closeCartHandler: closeCartHandler,
-        isLoggedCart: isLoggedCart
+        transferData: transferData,
+        isLoggedCart: isLoggedCart,
+        transferredData: transferredData,
+        total: inputValue,
+        totalAmount: totalAmount
       }}
     >
       {props.children}

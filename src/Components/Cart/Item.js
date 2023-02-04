@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "../../UI/Button";
+import AuthContext from "../../store/auth-context";
 
 import classes from "./Item.module.css";
 
 const Item = (props) => {
+  const AuthCtx = useContext(AuthContext);
+  
   return (
     <React.Fragment>
       <div className={classes.cart}>
         <div className={classes.information}>
-          <div className={classes.title}>Sushi</div>
+          <div className={classes.title}>{props.title}</div>
           <div className={classes.ttl}>
-            <div className={classes.price}>$22.99</div>
-            <div className={classes.totalMeal}>x 1</div>
+            <div className={classes.price}>${props.totalAmount}</div>
+            <div className={classes.totalMeal}>x {}</div>
           </div>
         </div>
         <div className={classes.buttons}>
