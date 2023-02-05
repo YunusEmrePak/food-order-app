@@ -6,15 +6,17 @@ import classes from "./Item.module.css";
 
 const Item = (props) => {
   const AuthCtx = useContext(AuthContext);
-  
+
   return (
     <React.Fragment>
       <div className={classes.cart}>
         <div className={classes.information}>
           <div className={classes.title}>{props.title}</div>
           <div className={classes.ttl}>
-            <div className={classes.price}>${props.totalAmount}</div>
-            <div className={classes.totalMeal}>x {}</div>
+            <div className={classes.price}>
+              ${parseFloat(props.totalAmount).toFixed(2)}
+            </div>
+            <div className={classes.totalMeal}>x {props.total}</div>
           </div>
         </div>
         <div className={classes.buttons}>

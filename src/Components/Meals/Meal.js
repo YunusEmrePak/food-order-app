@@ -9,13 +9,19 @@ const Meal = (props) => {
   const AuthCtx = useContext(AuthContext);
 
   const addItemHandler = () => {
-    const data = {
-      id: Math.random(),
-      mealName: props.title,
-      total: AuthCtx.total
-    };
+    props.item.map((item) => {
+      if (item.id === props.id) {
+        item.isAdded = true;
+        item.total += AuthCtx.total;
+        item.totalAmount += +parseFloat(
+          +(AuthCtx.total * item.mealPrice)
+        ).toFixed(2);
 
-    AuthCtx.transferData(data, props.price);
+        AuthCtx.total = 0;
+      }
+    });
+
+    AuthCtx.transferData(props.item, props.price);
   };
 
   return (
